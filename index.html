@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="シンプルでモダンなポートフォリオ / 企業サイトのテンプレート" />
+  <title>Sample Site — シンプルホームページ</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">YourBrand</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="メニューを開く">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="site-nav" class="site-nav">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>魅力的なウェブプレゼンスを、シンプルに。</h1>
+          <p>レスポンシブで高速、SEO 基本対応。個人ポートフォリオや小規模企業向けのテンプレートです。</p>
+          <p class="hero-cta">
+            <a class="btn-primary" href="#contact">お問い合わせ</a>
+            <a class="btn-outline" href="#portfolio">実績を見る</a>
+          </p>
+        </div>
+        <div class="hero-card">
+          <img src="https://via.placeholder.com/560x360.png?text=Preview" alt="サイトプレビュー">
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>About</h2>
+        <p>当サイトは、迅速に公開できる静的サイトテンプレートです。必要に応じて React/Next.js などに移行したり、CMS と連携してコンテンツ管理を容易にできます。</p>
+        <div class="cards">
+          <div class="card">
+            <h3>モバイルファースト</h3>
+            <p>スマホでの見やすさを重視したデザインで、どのデバイスでも快適に表示されます。</p>
+          </div>
+          <div class="card">
+            <h3>軽量・高速</h3>
+            <p>余分なライブラリを使わず、読み込みを最小限に抑えています。</p>
+          </div>
+          <div class="card">
+            <h3>カスタマイズ容易</h3>
+            <p>色、フォント、コンテンツを編集するだけで簡単にブランドに合わせられます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section services">
+      <div class="container">
+        <h2>Services</h2>
+        <ul class="service-list">
+          <li>
+            <h3>Web制作</h3>
+            <p>コーポレートサイト、ランディングページ、ポートフォリオ制作を承ります。</p>
+          </li>
+          <li>
+            <h3>パフォーマンス最適化</h3>
+            <p>表示速度・SEO の改善でユーザ体験と検索順位を向上させます。</p>
+          </li>
+          <li>
+            <h3>保守・運用</h3>
+            <p>更新作業やホスティングの運用代行も可能です。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="section portfolio">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+          <figure>
+            <img src="https://via.placeholder.com/420x280.png?text=Project+1" alt="Project 1">
+            <figcaption>Project 1 — サイト制作</figcaption>
+          </figure>
+          <figure>
+            <img src="https://via.placeholder.com/420x280.png?text=Project+2" alt="Project 2">
+            <figcaption>Project 2 — ランディングページ</figcaption>
+          </figure>
+          <figure>
+            <img src="https://via.placeholder.com/420x280.png?text=Project+3" alt="Project 3">
+            <figcaption>Project 3 — ブログ構築</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-layout">
+          <div class="contact-info">
+            <p>まずはお気軽にご相談ください。以下フォーム、またはメールで受け付けています。</p>
+            <ul>
+              <li><strong>Email:</strong> info@example.com</li>
+              <li><strong>Phone:</strong> 090-1234-5678</li>
+              <li><strong>Location:</strong> Tokyo, Japan</li>
+            </ul>
+            <p class="small">※ダミー情報です。公開前に差し替えてください。</p>
+          </div>
+
+          <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/your-form-id">
+            <!-- Replace the action URL with your Formspree endpoint or server -->
+            <label>
+              お名前
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              メール
+              <input type="email" name="email" required>
+            </label>
+            <label>
+              メッセージ
+              <textarea name="message" rows="6" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">送信</button>
+            </div>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> YourBrand. All rights reserved.</p>
+      <nav class="socials">
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
